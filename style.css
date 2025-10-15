@@ -1,0 +1,334 @@
+/* =======================
+    HEADER STYLES
+    ======================= */
+
+.site-header {
+    background: none;
+    padding: 0;
+    border-bottom: none;
+}
+.header-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =======================
+   HOMEPAGE MIDDLE PART STYLES
+   ======================= */
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Gateway Section */
+.gateway-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+}
+
+.gateway-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.gateway-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gateway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 3em;
+    color: #1877f2;
+    margin-bottom: 20px;
+}
+
+.gateway-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.gateway-card p {
+    color: #606770;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-main, .btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main { background-color: #1877f2; color: #fff; }
+.btn-main:hover { background-color: #166fe5; }
+.btn-secondary { background-color: #e4e6eb; color: #050505; }
+.btn-secondary:hover { background-color: #d8dbdf; }
+
+/* Stats Section */
+.stats-section {
+    padding: 60px 20px;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stats-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.stat-box {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.stat-box i {
+    font-size: 2.5em;
+    color: #42b72a;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    color: #1c1e21;
+}
+
+.stat-metric {
+    font-size: 1.1em;
+    color: #606770;
+    margin-top: 5px;
+}
+
+/* =======================
+   FAQ Section Styles
+   ======================= */
+.faq-section {
+    background-color: #f0f2f5;
+    padding: 50px 15px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #1c1e21;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 20px;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f5f6f7;
+}
+
+.faq-icon {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.faq-answer {
+    background-color: #fff;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    line-height: 1.6;
+    color: #606770;
+}
+
+/* =======================
+   FOOTER STYLES
+   ======================= */
+.site-footer a {
+    text-decoration: none;
+}
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-top-bar {
+    background-color: #e6b800;
+    padding: 10px 0;
+    color: #000;
+}
+.footer-top-bar .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.connect-us, .feedback {
+    display: flex;
+    align-items: center;
+}
+.feedback a {
+    color: #000;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.social-icon {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.youtube { background-color: #ff0000; }
+.footer-main {
+    background-color: #1c1c1c;
+    color: #ccc;
+    padding: 40px 0;
+}
+.footer-main .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.footer-column h4 {
+    color: #fff;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul a {
+    color: #ccc;
+}
+.footer-logo {
+    height: 80px;
+    margin-bottom: 15px;
+}
+.footer-column.text-center {
+    text-align: center;
+}
+.footer-bottom {
+    background-color: #111;
+    color: #888;
+    padding: 15px 0;
+    font-size: 12px;
+}
+.footer-bottom .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =======================
+   RESPONSIVE STYLES
+   ======================= */
+@media (max-width: 900px) {
+    .gateway-container, .stats-grid, .footer-main .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container, .footer-bottom .footer-container, .footer-top-bar .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .logo-left, .logo-right {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+}
