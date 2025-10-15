@@ -1,10 +1,39 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+@app.route('/admin-login', methods=['GET', 'POST'])
+def admin_login():
+    error = None
+    if request.method == 'POST':
+        admin_id = request.form.get('admin_id')
+        password = request.form.get('password')
+        if admin_id == 'admin' and password == 'admin123':
+            return redirect(url_for('home'))
+        else:
+            error = "Incorrect Admin ID or Password"
+    return render_template('admin_login.html', error=error)
+
+
+@app.route('/student-login', methods=['GET', 'POST'])
+def student_login():
+    error = None
+    if request.method == 'POST':
+        student_id = request.form.get('student_id')
+        password = request.form.get('password')
+        if student_id == 'student' and password == 'student123':
+            return redirect(url_for('home'))
+        else:
+            error = "Incorrect Student ID or Password"
+    return render_template('student_login.html', error=error)
+
 
 @app.route('/admin-forgot-password', methods=['GET', 'POST'])
 def admin_forgot_password():
